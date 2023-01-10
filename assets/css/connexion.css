@@ -1,0 +1,111 @@
+@import url("shared_css.css");
+
+h1{
+    text-align: center;
+    color:white;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-top:2%;
+    margin-bottom:9%;
+}
+
+.login-box {
+    margin: 7% auto auto;
+    width: 40%;
+    padding: 3%;
+    background: rgba(0,0,0,.5);
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 15px;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 25px;
+    color:white;
+    margin-bottom: 5%;
+    border: none;
+    border-bottom: 2px solid white;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    font-size: 25px;
+    color: white;
+    pointer-events: none;
+    transition: .6s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 18px;
+}
+
+.login-box form .class-btn{
+    text-align: center;
+    margin-top:2%;
+}
+
+.btn {
+    background-color:transparent;
+    border:2px solid white;
+    border-radius: 5px;
+    color:white;
+    padding: 2% 3%;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.7s;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: white;
+    color:black;
+}
+
+.wrong-login{
+    display:block;
+    color:red;
+    margin-top:6%;
+    text-align:center;
+    font-size:1.4em;
+}
+
+.crea-box,.connection-box{
+    text-align:center;
+    margin-top:5%;
+}
+
+.creation,.connexion{
+    padding:1%;
+}
+
+@media screen and (max-width:767px) {
+    .login-box{
+        width:60%;
+        font-size:0.8em;
+        margin-top:25%;
+    }
+
+    label{
+        font-size: 1.8em !important;
+    }
+
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+        display: none;
+    }
+}
+

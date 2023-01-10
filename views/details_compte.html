@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+  <title> Mon Compte </title>
+  <link rel="icon" href="assets/img/icon.ico">
+
+  <link rel="stylesheet" href="assets/css/details_compte.css">
+
+</head>
+
+<body>
+<nav class="navbar">
+  <div class="container-flex">
+    <ul class="navbar-nav">
+      <li class="nav-item hover-underline-animation">
+        <a class="nav-link" href="details_carte.php">
+          Ma carte
+        </a>
+      </li>
+
+      <li class="nav-item hover-underline-animation">
+        <a class="nav-link" href="details_amis.php">
+          Mes amis
+        </a>
+      </li>
+
+      <li class="nav-item hover-underline-animation">
+        <a class="nav-link" href="details_compte.php">
+          Mon compte
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="compte-box">
+  <h1>Bienvenue, <?= $compte['user'] ?>.</h1>
+  <h3><i>Quelques informations sur vous...</i></h3>
+  <div class="infos">
+    <?php foreach ($compte as $key => $value): ?>
+
+    <?php if ($key !== 'user'): ?>
+
+    <h4> <?= ucfirst($key) ?> : <?= $value ?> </h4>
+
+    <?php endif; ?>
+
+    <?php endforeach; ?>
+  </div>
+</div>
+<form class="deco-box">
+  <input type="button" class="btn" value="Déconnexion"
+         onclick="document.location.href = 'deconnexionSession.php'" />
+</form>
+
+</div>
+
+</body>
+</html>

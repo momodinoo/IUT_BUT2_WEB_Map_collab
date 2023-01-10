@@ -1,0 +1,71 @@
+@import url("shared_css.css");
+
+.friend-box{
+    color:white;
+    margin-left: 10%;
+}
+
+h1{
+    margin-left: 2%;
+    margin-bottom: 4%;
+}
+
+.amis li{
+    margin-bottom: 3%;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 0.15em;
+    margin:auto;
+    font-weight: bold;
+    padding:1%;
+}
+
+.btn:hover {
+    background: white;
+    color:black;
+}
+
+.ajoutAmi{
+    text-align: center;
+}
+
+select{
+    outline:0;
+    border-radius:3%;
+    border:0;
+    padding: 1%;
+    margin-right:3%;
+}
+
+@media screen and (max-width:767px) {
+    .friend-box{
+        margin:0;
+        text-align: center;
+    }
+
+    h1{
+        margin-left: 0;
+        margin-bottom: 8%;
+    }
+
+    .amis ul{
+        margin-left: -5%;
+        list-style: none;
+    }
+
+    .amis li{
+        margin-bottom: 7%;
+    }
+
+    .btn,select{
+        padding:2%;
+    }
+}

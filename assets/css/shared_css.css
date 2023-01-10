@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'Montserrat';
+}
+
+body{
+    font-family: 'Montserrat';
+    background: radial-gradient(circle, rgba(36,115,172,1) 0%, rgba(119,60,227,1) 35%, rgba(161,31,208,1) 100%);
+}
+
+.navbar{
+    width:100%;
+}
+
+.container-flex{
+    display: flex;
+    height:10%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.container-flex a {
+    text-decoration: none !important;
+    color: white !important;
+    justify-content: space-around;
+}
+
+.navbar-nav{
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+.nav-item{
+    letter-spacing: 0.15em;
+    padding: 15px 0;
+    font-weight: 900;
+}
+
+.hover-underline-animation {
+    color:white;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    display: inline-block;
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 4px;
+    position: absolute;
+    background: white;
+    transition: width 0.4s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.hover-underline-animation:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+@media screen and (max-width:767px) {
+    .navbar-nav{
+        justify-content: space-around;
+        width:100%;
+    }
+}

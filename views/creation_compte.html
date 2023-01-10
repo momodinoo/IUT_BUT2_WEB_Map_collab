@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html>
+
+<head>
+  <base target="_top">
+  <meta charset="utf-8">
+  <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+  <title> Créer son compte </title>
+  <link rel="icon" href="assets/img/icon.ico">
+
+  <link rel="stylesheet" href="assets/css/creation_compte.css">
+
+</head>
+
+<body>
+  <div class="login-box">
+    <h1>Créer son compte</h1>
+    <form action="#" method="post">
+      <div class="user-box">
+        <input type="text" name="login" required="">
+        <label>Nom d'utilisateur</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="prenom" required="">
+        <label>Prénom</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="nom" required="">
+        <label>Nom</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="mail" required="">
+        <label>Mail</label>
+      </div>
+      <div class="user-box">
+        <input type="number" name="age" required="">
+      <label>Age</label>
+      </div>
+      <div class="user-box">
+        <input type="text" name="pays_origine" required="">
+        <label>Pays d'origine</label>
+      </div>
+      <div class="user-box">
+        <input type="password" name="pw" required="">
+        <label>Mot de passe</label>
+      </div>
+      <div class="class-btn">
+        <input type="submit" class="btn submit" value="Créer un compte"/>
+      </div>
+    </form>
+
+    <?php if (!empty($errors)) : ?>
+
+    <?php foreach ($errors as $error): ?>
+
+    <div class="wrong-login">
+      <?= $error ?> <br/>
+    </div>
+
+    <?php endforeach; ?>
+
+    <?php endif; ?>
+
+  </div>
+
+  <div class="connection-box">
+    <button class="btn connexion "onclick="window.location.href = 'connexion.php';">Se connecter</button>
+  </div>
+</body>
+</html>

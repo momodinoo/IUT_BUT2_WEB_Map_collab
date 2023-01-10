@@ -1,0 +1,30 @@
+@import url("connexion.css");
+
+.login-box{
+    margin-top:1%;
+    padding-top:1%;
+    padding-bottom:1%;
+}
+
+.connection-box{
+    margin-top:2%;
+}
+
+@media screen and (max-width:767px) {
+    .login-box{
+        width:80%;
+        font-size:0.8em;
+        margin-top:5%;
+        margin-bottom: 4%;
+        padding: 4%;
+    }
+
+    label{
+        font-size: 1.5em !important;
+    }
+
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+        display: none;
+    }
+}
